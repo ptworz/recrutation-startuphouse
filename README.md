@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Running app
+
+**Important!** To make app work you have to create alphavantage API key first and than paste it to `src/config.ts` file.
+
 ## Available Scripts
 
 In the project directory, you can run:

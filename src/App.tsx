@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Route, Routes } from "react-router-dom";
+
+import { CompanyDetails } from "./routes/CompanyDetails";
+import { Dashboard } from "./routes/Dashboard";
+import { StyledContent, StyledHeader, StyledLayout } from "./styled";
+
+const App = () => (
+  <StyledLayout>
+    <StyledHeader>SDH Frontend Homework</StyledHeader>
+    <StyledContent>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="company-details/:symbol" element={<CompanyDetails />} />
+      </Routes>
+    </StyledContent>
+  </StyledLayout>
+);
 
 export default App;
